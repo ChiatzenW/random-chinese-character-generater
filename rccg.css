@@ -1,0 +1,14 @@
+
+body {
+    background-color:rgb(40,44,52,1);
+    font-family: 'Source Code Pro', monospace;
+    font-size: 300%;
+    color: rgba(255, 255, 255, 0.856)
+}
+button {
+    background-color:mintcream;
+    color:rgb(40,44,52,1);
+    padding: 20px 20px;
+    font-size: 300;
+    font-family: 'Source Code Pro', monospace;
+}
