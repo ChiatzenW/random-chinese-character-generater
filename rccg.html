@@ -22,12 +22,14 @@ function loadCharacter()
         
         success: function (s)
         {
+          console.log(err);
           let g = document.getElementById('generated');
         g.innerHTML = JSON.stringify(s);
        
     },
     error: function(request, ajaxOptions, thrownError)
         {
+          console.log(err);
           let g = document.getElementById('generated');
         g.innerHTML = 'failed';
         }
