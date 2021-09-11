@@ -24,14 +24,12 @@ function loadCharacter()
         {
           let g = document.getElementById('generated');
         g.innerHTML = JSON.stringify(s);
-        location.reload();
        
     },
     error: function(request, ajaxOptions, thrownError)
         {
           let g = document.getElementById('generated');
         g.innerHTML = 'failed';
-        location.reload();
         }
 
   });
