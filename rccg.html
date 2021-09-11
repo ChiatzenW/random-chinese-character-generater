@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div >
+  <h2>Random Chinese character generator</h2>
+  <button type="button" onclick="loadCharacter()">Generate</button>
+</div>
+<div id="generated">
+  <h2>Generated:</h2>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+function loadCharacter()
+{
+    $.ajax(
+    {
+        type: "GET",
+        url: "arn:aws:execute-api:us-east-1:108949334896:su14n7n1r0/*/*/function2",
+        
+        success: function (s)
+        {
+          let g = document.getElementById('generated');
+        g.innerHTML = JSON.stringify(s);
+        location.reload();
+       
+    },
+    error: function(request, ajaxOptions, thrownError)
+        {
+          let g = document.getElementById('generated');
+        g.innerHTML = 'failed';
+        location.reload();
+        }
+
+  });
+}
+</script>
+
+</body>
+</html>
